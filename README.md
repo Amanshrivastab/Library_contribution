@@ -1,4 +1,4 @@
-| [![GitBot](gitbot-logo.svg)](#gitbot-library) | [Overview](#gitbot-library) · [Use](#use-the-library) · [Publish](#publish-a-bot) · [Bot format](#what-a-published-bot-contains) · [Safety](#before-you-install) |
+| [![GitBot](gitbot-logo.svg)](#gitbot-library) | [Overview](#gitbot-library) · [Use](#use-the-library) · [Publish](#publish-a-bot) · [Bot format](#what-a-published-bot-contains) · [Safety](#before-you-install) · [License](#license) |
 | :--- | ---: |
 
 <br><br><br>
@@ -8,6 +8,7 @@
 [![GitBot on npm](https://img.shields.io/npm/v/%40gitbot-hq%2Fgitbot?style=flat-square&label=gitbot)](https://www.npmjs.com/package/@gitbot-hq/gitbot)
 [![GitHub stars](https://img.shields.io/github/stars/gitbot-hq/Library?style=flat-square&logo=github)](https://github.com/gitbot-hq/Library/stargazers)
 [![Pull requests welcome](https://img.shields.io/github/issues-pr/gitbot-hq/Library?style=flat-square&label=pull%20requests)](https://github.com/gitbot-hq/Library/pulls)
+[![License MIT](https://img.shields.io/github/license/gitbot-hq/Library?style=flat-square&label=license)](LICENSE)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="library-cover-dark.webp">
@@ -71,6 +72,8 @@ bots/<slug>/
 
 Keep submissions portable: no local paths, private repository names, credentials, personal machine details, images, or binaries.
 
+Opening a pull request publishes your bot under this repository's [MIT license](LICENSE). You keep the copyright in what you wrote, and bot folders carry no license file of their own.
+
 <br><br><br>
 
 ## What a published bot contains
@@ -90,6 +93,14 @@ The repository's generated index is maintained separately. Contributors add a bo
 Each pull request should publish one bot. Review checks the schema, file layout, field limits, author, and common privacy mistakes. Maintainers also check whether the instructions deliver what the listing promises and whether the requested permission mode fits the job.
 
 Have an idea without a finished bot? [Open an issue](https://github.com/gitbot-hq/Library/issues) and describe the job it should perform.
+
+<br><br><br>
+
+## License
+
+[MIT](LICENSE), the same license as [GitBot](https://github.com/gitbot-hq/GitBot) itself.
+
+One license covers the repository, the docs, and every bot in it, so nothing here needs its own terms and nobody has to check a bot's license before installing it. Contributors keep the copyright in what they write and license it to everyone else under MIT by submitting it. A bot that cannot be published under MIT belongs on its author's machine instead.
 
 <br><br><br>
 

@@ -35,6 +35,11 @@ something I would keep to myself. Say so when it is not there yet.**
   reword, reformat or "improve" its instructions or setup steps on the way through. If you think
   something should change, say so and let me decide; change it only if I ask you to.
 - Never write to gitbot's own data file. Reading it to find my bots is fine; editing it is not.
+- **The library is MIT, and so is anything we publish into it.** Never add a licence file, a licence
+  header or a licence field to the bot folder; the repository's root `LICENSE` already covers it. If
+  the bot's text came from somewhere I cannot license that way — a copyleft or source-available
+  repository, paid material, an employer's private code — stop and tell me, and let me decide whether
+  to rewrite it or keep the bot local.
 
 ---
 
@@ -242,6 +247,9 @@ Print, as prose rather than JSON:
 - the agent and permission mode, and **one plain sentence on what that permission mode lets this bot
   do on a stranger's computer**.
 
+Say in one line that publishing this releases it under the library's MIT licence, and ask me to
+confirm that is fine before you write anything.
+
 Then ask whether to write it. Change what I ask, show it again, and only continue once I have said
 yes.
 
@@ -335,7 +343,8 @@ do not scaffold tooling of your own. Fall back to checking by hand.
 
 Checking by hand: the JSON parses, `slug` matches the folder name, `features`
 has exactly three entries, every enum value is spelled exactly as listed in step 4, no other bot has
-this `name` or `slug`, and `instructions.md` is under 600 words.
+this `name` or `slug`, `instructions.md` is under 600 words, and the folder holds nothing but
+`bot.json`, `instructions.md` and — if step 6 called for it — `setup.md`.
 
 Then read the final `git diff` yourself, looking for the things a schema cannot catch: an absolute
 path, my username, a stray credential, a repo name of mine, or a description that promises something
@@ -374,7 +383,8 @@ right one, whether it has setup steps, and how you tested it if you did. Do not 
 
 Tell me, in a few lines: the pull request URL; the bot's name and one line on what it does; its
 permission mode and what that allows; whether it has setup steps; and what happens next — a
-maintainer reviews it, and on merge it appears on the discover page for everyone.
+maintainer reviews it, and on merge it appears on the discover page for everyone, MIT licensed like
+the rest of the library.
 
 If I want the bot on my own machine before it is merged, say so: I can build it locally with
 gitbot's [bot authoring prompt](https://github.com/gitbot-hq/GitBot/blob/main/docs/bot-author-prompt.md),
