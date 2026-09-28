@@ -5,8 +5,9 @@
 **Ready-made bots for [gitbot](https://github.com/gitbot-hq/GitBot). Install one, point it at a folder, put it to work.**
 
 [![npm version](https://img.shields.io/npm/v/@gitbot-hq/gitbot?label=%40gitbot-hq%2Fgitbot)](https://www.npmjs.com/package/@gitbot-hq/gitbot)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-[Get gitbot](#get-gitbot) · [What is a bot?](#what-is-a-bot) · [Using a bot](#using-a-bot-from-the-library) · [Publish a bot](#publish-your-own)
+[Get gitbot](#get-gitbot) · [What is a bot?](#what-is-a-bot) · [Using a bot](#using-a-bot-from-the-library) · [Publish a bot](#publish-your-own) · [License](#license)
 
 </div>
 
@@ -62,7 +63,18 @@ The quickest way is to let an agent do it: paste [`docs/publish-prompt.md`](docs
 - **[Contributing guide](CONTRIBUTING.md)** — the rules, the checklist, and what review looks for.
 - **[Bot folder specification](docs/bot-schema.md)** — every field, its limits, and why it is shaped that way.
 
+Everything published here is MIT licensed, so anyone can read a bot, install it, fork it and adapt
+it. Submitting a pull request means you are offering your bot on those terms.
+
 Have an idea but not the time to build it? [Open an issue](https://github.com/gitbot-hq/Library/issues) and describe what the bot should do.
+
+## License
+
+[MIT](LICENSE) — the same licence as [gitbot](https://github.com/gitbot-hq/GitBot) itself.
+
+This covers the whole repository, every bot in it, and the docs. There are no per-bot licences: a
+bot that cannot be published under MIT cannot be published here. Contributors keep the copyright in
+what they write and licence it to everyone else under MIT by submitting it.
 
 ## Links
 

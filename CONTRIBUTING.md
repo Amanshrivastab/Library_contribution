@@ -46,6 +46,20 @@ Keep it under 600 words; it is prepended to every conversation the bot ever has.
 - **Do not edit `index.json` or `verified.json`.** They are generated and maintained here.
 - **Publishable, not personal.** A bot that only works in your own checkout belongs on your machine,
   not in the library. Say what shape of repo it assumes.
+- **MIT, all of it.** Opening a pull request licenses your bot to everyone under the
+  [MIT licence](LICENSE) that covers this repository. You keep the copyright in what you wrote.
+- **Nothing you cannot license that way.** Text lifted from a repository under a copyleft or
+  source-available licence, from paid material, or from an employer's private codebase cannot go in.
+  Write it yourself, or do not submit it.
+
+## Licensing
+
+There is one licence for the whole library and it is not negotiable per bot.
+
+Do not add a `LICENSE` file, a licence field or a licence header inside `bots/<slug>/` — the root
+[`LICENSE`](LICENSE) already covers it, and a second licence in a bot folder will fail review. If
+your bot genuinely cannot be MIT, keep it on your own machine; gitbot runs private bots perfectly
+well without the library.
 
 ## Before you open the pull request
 
@@ -55,6 +69,8 @@ Keep it under 600 words; it is prepended to every conversation the bot ever has.
   them.
 - No other bot already uses this name or slug.
 - You have read `instructions.md` start to finish and it does what the description claims.
+- Every word in the folder is yours to license under MIT, and the folder adds no licence file of its
+  own.
 
 ## What review looks at
 
