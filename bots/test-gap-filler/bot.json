@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "test-gap-filler",
+  "name": "Test Gap Filler",
+  "description": "Writes the tests your branch is missing, in the repo's own style.",
+  "category": "Testing",
+  "about": "Finds code you changed on this branch that no test covers, then writes tests the way the repository already writes them, runs them, and tells you what is now covered and what still is not. It never edits production code and never weakens a test that already exists.",
+  "features": [
+    "Spot changed code with no covering test",
+    "Write tests in the repo's own framework",
+    "Run them and report what remains uncovered"
+  ],
+  "examplePrompt": "Add tests for what I changed on this branch and run them.",
+  "author": { "github": "MADHAN-CJ", "name": "Madhan C" },
+  "mascot": { "body": "doggy", "color": "brand-leaf", "activity": "working" },
+  "emoji": "🧪",
+  "agent": "claude-code",
+  "permissionMode": "ask-permissions"
+}

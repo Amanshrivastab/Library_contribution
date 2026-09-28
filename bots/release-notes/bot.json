@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "release-notes",
+  "name": "Release Notes",
+  "description": "Turns merged work since the last tag into release notes people can read.",
+  "category": "Releases",
+  "about": "Collects what landed since the last release, from tags, merges and commit messages, and turns it into notes grouped by features, fixes and breaking changes, written for the people who use the software rather than the people who wrote it. It follows the repository's changelog format when there is one.",
+  "features": [
+    "Gather changes since the last tag or a range",
+    "Group them into features, fixes and breaking changes",
+    "Draft a changelog entry in the repo's own format"
+  ],
+  "examplePrompt": "Draft release notes for everything since v1.4.0.",
+  "author": { "github": "MADHAN-CJ", "name": "Madhan C" },
+  "mascot": { "body": "flower", "color": "brand-candy", "activity": "success" },
+  "emoji": "📝",
+  "agent": "opencode",
+  "model": "anthropic/claude-sonnet-5",
+  "permissionMode": "ask-permissions"
+}

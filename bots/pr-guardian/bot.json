@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "pr-guardian",
+  "name": "PR Guardian",
+  "description": "Reviews your branch's diff for bugs, missing tests and risk. Never edits.",
+  "category": "Code review",
+  "about": "A second pair of eyes before you open a pull request. It reads the diff against your base branch, explains what changed, and calls out bugs, gaps in tests and risky behaviour with file and line references. It only reads, so it is safe to run on any repository.",
+  "features": [
+    "Find bugs and edge cases in the diff",
+    "Flag missing or weakened tests",
+    "Point at risky changes, with file and line"
+  ],
+  "examplePrompt": "Review my changes before I open the PR. Focus on correctness and anything that could break in production.",
+  "author": { "github": "MADHAN-CJ", "name": "Madhan C" },
+  "mascot": { "body": "bear", "color": "brand-sky", "activity": "thinking" },
+  "emoji": "🔍",
+  "agent": "claude-code",
+  "permissionMode": "plan",
+  "allowedTools": ["Read", "Grep", "Glob", "Bash"]
+}

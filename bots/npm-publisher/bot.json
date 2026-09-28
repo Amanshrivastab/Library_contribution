@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "npm-publisher",
+  "name": "NPM publisher",
+  "description": "Walks a Node package through the npm publish flow. Never touches git.",
+  "category": "Releases",
+  "about": "Takes a Node package from where it is now to published on npm, one step at a time: auth check, pre-flight on package.json, a version bump you choose, the project's own lint, build and test scripts, a dry run you approve, then publish with a 2FA code you supply. It edits package.json and leaves the bump uncommitted; it never runs a git command that writes.",
+  "features": [
+    "Check auth and package.json before you publish",
+    "Bump the version and run the project's own checks",
+    "Show the dry-run file list before anything ships"
+  ],
+  "examplePrompt": "Publish this package to npm. Bump the patch version first and show me what's in the tarball before it goes.",
+  "author": { "github": "anildukkipatty", "name": "Anil Dukkipatty" },
+  "mascot": { "body": "rectangle", "color": "brand-ember", "activity": "working" },
+  "emoji": "📦",
+  "agent": "claude-code",
+  "permissionMode": "auto-approve"
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "granola-meme-deck",
+  "name": "Granola Meme Deck",
+  "description": "Turns your recent Granola meeting notes into a meme deck. Read-only.",
+  "category": "Developer workflow",
+  "about": "Point it at a week of meetings and get back a slide deck of memes about what actually happened, plus one slide of real takeaways. It reads your notes through Granola's API, saves one HTML file in the current folder, and never uploads anything.",
+  "features": [
+    "Pull a week of notes from Granola",
+    "Turn recurring themes into memes",
+    "Save an offline HTML deck locally"
+  ],
+  "examplePrompt": "Make a meme deck from my Product folder in Granola, last two weeks.",
+  "author": { "github": "crocsarecool", "name": "Raunaq Vaisoha" },
+  "mascot": { "body": "cat", "color": "brand-candy", "activity": "working" },
+  "emoji": "😂",
+  "agent": "claude-code",
+  "permissionMode": "ask-permissions"
+}

@@ -1,0 +1,3 @@
+- Ask the user for their Granola API key and wait. If they don't have one, point them to Granola's documentation on API keys and wait.
+- Save it to a file named `.granolabot` in the user's home directory, as one line: `GRANOLA_API_KEY=<key>`. On macOS and Linux, make the file readable only by the user.
+- Confirm the key works by calling `GET https://public-api.granola.ai/v1/notes?page_size=1` with the header `Authorization: Bearer <key>`. Success means a response containing a `notes` list. If the key is rejected, tell the user and ask again.

@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "lumie",
+  "name": "Lumie",
+  "description": "Grows your Luma events and gets registrants to show up. Asks before each send.",
+  "category": "Developer workflow",
+  "about": "Lumie checks your upcoming Luma events at the start of every conversation and reports registrations, who signed up and what changed since last time. It then ranks the three actions most likely to help today, like a reminder email or a personal note to a key guest, and sends each one only after you approve the exact text.",
+  "features": [
+    "Track registrations and changes for every event",
+    "Rank the three best growth actions for today",
+    "Draft emails and DMs, one approval per send"
+  ],
+  "examplePrompt": "How are my upcoming events looking? Draft a personal note to the most notable people who registered this week.",
+  "author": { "github": "crocsarecool", "name": "Raunaq Vaisoha" },
+  "mascot": { "body": "star", "color": "brand-candy", "activity": "working" },
+  "emoji": "🤖",
+  "agent": "claude-code",
+  "permissionMode": "auto-approve"
+}

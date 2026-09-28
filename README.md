@@ -1,83 +1,113 @@
-<div align="center">
+| [![GitBot](gitbot-logo.svg)](#gitbot-library) | [Overview](#gitbot-library) · [Use](#use-the-library) · [Publish](#publish-a-bot) · [Bot format](#what-a-published-bot-contains) · [Safety](#before-you-install) · [License](#license) |
+| :--- | ---: |
 
-# gitbot Library
+<br><br><br>
 
-**Ready-made bots for [gitbot](https://github.com/gitbot-hq/GitBot). Install one, point it at a folder, put it to work.**
+# GitBot Library
 
-[![npm version](https://img.shields.io/npm/v/@gitbot-hq/gitbot?label=%40gitbot-hq%2Fgitbot)](https://www.npmjs.com/package/@gitbot-hq/gitbot)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitBot on npm](https://img.shields.io/npm/v/%40gitbot-hq%2Fgitbot?style=flat-square&label=gitbot)](https://www.npmjs.com/package/@gitbot-hq/gitbot)
+[![GitHub stars](https://img.shields.io/github/stars/gitbot-hq/Library?style=flat-square&logo=github)](https://github.com/gitbot-hq/Library/stargazers)
+[![Pull requests welcome](https://img.shields.io/github/issues-pr/gitbot-hq/Library?style=flat-square&label=pull%20requests)](https://github.com/gitbot-hq/Library/pulls)
+[![License MIT](https://img.shields.io/github/license/gitbot-hq/Library?style=flat-square&label=license)](LICENSE)
 
-[Get gitbot](#get-gitbot) · [What is a bot?](#what-is-a-bot) · [Using a bot](#using-a-bot-from-the-library) · [Publish a bot](#publish-your-own) · [License](#license)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="library-cover-dark.webp">
+  <source media="(prefers-color-scheme: light)" srcset="library-cover-light.webp">
+  <img alt="GitBot Library" src="library-cover-light.webp">
+</picture>
 
-</div>
+**Ready-made bots for [GitBot](https://github.com/gitbot-hq/GitBot). Read one, install it, and put it to work in your own folders.**
 
-> [!NOTE]
-> **The first bots are coming soon.** This repository is where they will live. Watch or star the repo to hear when they land.
+GitBot turns Claude Code, Codex, or OpenCode into reusable bots that run on your machine. This repository is the public catalog behind GitBot's **Marketplace**. Every listing includes the bot's instructions, settings, and optional setup steps in plain files you can inspect before installing it.
 
-## What is this?
+<br><br><br>
 
-[gitbot](https://github.com/gitbot-hq/GitBot) lets you turn an AI coding agent — Claude Code, Codex or OpenCode — into reusable **bots** that run on your own machine. This library is the home for bots built with it: bots you can install instead of writing from scratch, and read to learn how a good bot is put together.
+## Use the Library
 
-## Get gitbot
-
-You need gitbot to use anything here.
+First, install and start GitBot:
 
 ```bash
 npm install -g @gitbot-hq/gitbot
 gitbot start
 ```
 
-- **npm package:** [`@gitbot-hq/gitbot`](https://www.npmjs.com/package/@gitbot-hq/gitbot)
-- **Source, docs and issues:** [github.com/gitbot-hq/GitBot](https://github.com/gitbot-hq/GitBot)
+Then:
 
-gitbot needs Node.js 18+ and at least one agent installed and logged in. The [gitbot README](https://github.com/gitbot-hq/GitBot#install) covers setup.
+1. Open GitBot and go to **Marketplace**.
+2. Choose a bot and review what it does, its instructions, setup steps, agent, and permissions.
+3. Select **Install** to add it to your machine.
+4. Start a thread in the folder where you want it to work.
 
-## What is a bot?
+GitBot needs Node.js 18 or newer and at least one supported coding agent installed and signed in. See the [GitBot README](https://github.com/gitbot-hq/GitBot) for the full requirements.
 
-A bot is an agent you define once and reuse:
+<br><br><br>
 
-- **Instructions** — its standing job, e.g. *"Review the diff against main. Flag bugs and missing tests. Never modify files."*
-- **An agent** — Claude Code, Codex or OpenCode — and optionally a model.
-- **A permission mode** — ask before each tool, auto-approve, or plan only.
-- **Tool lists** — optionally, the only tools it may use.
-- **Setup steps** — optionally, what it needs on a machine (*"ffmpeg must be on PATH"*), which it checks or prepares once.
-
-Every bot in this library is one folder under `bots/` holding exactly that, plus the words that describe it. You can read any of them in full before you install — the instructions are plain Markdown, not an encoded blob.
-
-## Using a bot from the library
-
-1. Open the gitbot hub and go to **Discover**.
-2. Find a bot and open it. Read what it does, what it can help with, and the permission mode it runs in.
-3. Click **Install**. The bot is added to your machine, with approvals on by default.
-4. Open a thread in the folder you want it to work in, and say hi. The bot starts its job on your first message, whatever that message says.
+## Before you install
 
 > [!WARNING]
-> **Read a bot before you install it.** A bot is a set of instructions for an AI agent that runs on your machine with your file access. Its detail page shows the instructions it will run under and the permission mode it carries, and a bot with setup steps begins its one-time setup run as soon as you install it. Install bots you have read or whose author you trust — the same care you would give a script from the internet. See [gitbot's security notes](https://github.com/gitbot-hq/GitBot#security).
+> A bot is a set of instructions for an AI coding agent running with your file and shell access. Read its files and permission mode before installing it, just as you would inspect a script from the internet.
 
-## Publish your own
+A bot may include one-time setup instructions that run after installation. Prefer bots whose behavior you understand, keep approvals enabled when trying one for the first time, and use GitBot only on a trusted network. Read the [GitBot README](https://github.com/gitbot-hq/GitBot) before giving a bot broader permissions.
 
-Built a bot that earns its keep? Add it here with a pull request.
+<br><br><br>
 
-The quickest way is to let an agent do it: paste [`docs/publish-prompt.md`](docs/publish-prompt.md) into Claude Code, Codex or OpenCode. It starts by listing the bots you have already built on this machine and offering to publish one of them as it stands; otherwise it interviews you about a new one. Either way it writes the folder, checks it and opens the pull request, pausing for your approval before it writes anything and before it submits.
+## Publish a bot
 
-- **[Contributing guide](CONTRIBUTING.md)** — the rules, the checklist, and what review looks for.
-- **[Bot folder specification](docs/bot-schema.md)** — every field, its limits, and why it is shaped that way.
+You can publish with an agent or prepare the files yourself.
 
-Everything published here is MIT licensed, so anyone can read a bot, install it, fork it and adapt
-it. Submitting a pull request means you are offering your bot on those terms.
+### Ask an agent to prepare it
 
-Have an idea but not the time to build it? [Open an issue](https://github.com/gitbot-hq/Library/issues) and describe what the bot should do.
+Give Claude Code, Codex, or OpenCode the [`publish-prompt.md`](docs/publish-prompt.md) instructions. The agent can find an existing local bot or help shape a new one, validate the listing, show you the final diff, and wait for your approval before opening a pull request.
+
+### Create it manually
+
+Read the [contributing guide](CONTRIBUTING.md) and [bot schema](docs/bot-schema.md), then open a pull request containing one new folder under `bots/`.
+
+```text
+bots/<slug>/
+  bot.json           listing, mascot, agent, and permissions
+  instructions.md    the bot's standing job
+  setup.md           optional one-time setup requirements
+```
+
+Keep submissions portable: no local paths, private repository names, credentials, personal machine details, images, or binaries.
+
+Opening a pull request publishes your bot under this repository's [MIT license](LICENSE). You keep the copyright in what you wrote, and bot folders carry no license file of their own.
+
+<br><br><br>
+
+## What a published bot contains
+
+- **A clear listing** with its name, description, category, features, example prompt, and author.
+- **Readable instructions** that define the job the agent performs in every thread.
+- **Runtime settings** for its agent, permission mode, optional model, and tool limits.
+- **A GitBot mascot** selected by body, color, and activity tokens.
+- **Optional setup instructions** only when the job genuinely needs machine preparation.
+
+The repository's generated index is maintained separately. Contributors add a bot folder and never edit `index.json` or `verified.json` directly.
+
+<br><br><br>
+
+## Review and contribution
+
+Each pull request should publish one bot. Review checks the schema, file layout, field limits, author, and common privacy mistakes. Maintainers also check whether the instructions deliver what the listing promises and whether the requested permission mode fits the job.
+
+Have an idea without a finished bot? [Open an issue](https://github.com/gitbot-hq/Library/issues) and describe the job it should perform.
+
+<br><br><br>
 
 ## License
 
-[MIT](LICENSE) — the same licence as [gitbot](https://github.com/gitbot-hq/GitBot) itself.
+[MIT](LICENSE), the same license as [GitBot](https://github.com/gitbot-hq/GitBot) itself.
 
-This covers the whole repository, every bot in it, and the docs. There are no per-bot licences: a
-bot that cannot be published under MIT cannot be published here. Contributors keep the copyright in
-what they write and licence it to everyone else under MIT by submitting it.
+One license covers the repository, the docs, and every bot in it, so nothing here needs its own terms and nobody has to check a bot's license before installing it. Contributors keep the copyright in what they write and license it to everyone else under MIT by submitting it. A bot that cannot be published under MIT belongs on its author's machine instead.
+
+<br><br><br>
 
 ## Links
 
-- gitbot on npm — [npmjs.com/package/@gitbot-hq/gitbot](https://www.npmjs.com/package/@gitbot-hq/gitbot)
-- gitbot on GitHub — [github.com/gitbot-hq/GitBot](https://github.com/gitbot-hq/GitBot)
-- Report a problem with gitbot itself — [GitBot issues](https://github.com/gitbot-hq/GitBot/issues)
+- [GitBot source and documentation](https://github.com/gitbot-hq/GitBot)
+- [GitBot on npm](https://www.npmjs.com/package/@gitbot-hq/gitbot)
+- [Contributing guide](CONTRIBUTING.md)
+- [Bot folder specification](docs/bot-schema.md)
+- [Agent publishing prompt](docs/publish-prompt.md)

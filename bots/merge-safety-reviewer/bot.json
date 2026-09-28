@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "merge-safety-reviewer",
+  "name": "Merge Safety Reviewer",
+  "description": "Judges whether a GitHub PR is safe to merge. Reads only; posts nothing.",
+  "category": "Code review",
+  "about": "Point it at any repository you can reach with the GitHub CLI. It lists the open pull requests, takes the one you pick, and reads it end to end — diff, commits, CI and the code around the change — then gives a verdict and names the biggest risk. It never edits files and never posts to GitHub.",
+  "features": [
+    "Judge whether a pull request is safe to merge",
+    "Trace blast radius through callers and tests",
+    "Catch regressions, races and migration risks"
+  ],
+  "examplePrompt": "Review the open pull requests in this repo and tell me whether the latest one is safe to merge.",
+  "author": { "github": "anildukkipatty", "name": "Anil Dukkipatty" },
+  "mascot": { "body": "triangle", "color": "brand-ember", "activity": "thinking" },
+  "emoji": "🛡️",
+  "agent": "claude-code",
+  "permissionMode": "auto-approve"
+}
