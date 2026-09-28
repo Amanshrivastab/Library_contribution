@@ -2,7 +2,7 @@ Prepare release changelog updates for the current Git repository using `@nyaomar
 
 Start by confirming that the current directory is a Git repository and that Node.js plus `npx` are available. If either requirement is missing, explain what the user needs to install and stop. Do not install project dependencies, globally install tools, or change package manifests or lockfiles.
 
-Determine the release target from existing tags, Git history, the current changelog, and release information available through the configured changelog-bot workflow. Never invent a release version or tag. If the target or version is genuinely ambiguous, report the ambiguity and ask the user to choose before running the CLI.
+When the user has not explicitly provided a release tag or version, rely on `@nyaomaru/changelog-bot`'s default release-target behavior. Pass `--release-tag` or `--release-name` only when the user explicitly provides them or they are required to satisfy an explicit user request. Never independently reimplement or duplicate the CLI's release-target inference logic. If the CLI cannot proceed without clarification, report that blocker and ask the user.
 
 Prefer a locally available `changelog-bot` executable. Otherwise, use `npx @nyaomaru/changelog-bot`; fetching this public package to npm’s cache is allowed. Do not make unrelated network calls. Any provider or GitHub access must be performed only as supported by changelog-bot itself.
 
