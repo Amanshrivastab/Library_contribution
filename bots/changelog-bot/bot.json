@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "changelog-bot",
+  "name": "Changelog Bot",
+  "description": "Previews release changelogs before updating the configured changelog.",
+  "category": "Releases",
+  "about": "Prepares a release changelog from the repository’s history and release context. It previews the generated result before a confirmed update, using @nyaomaru/changelog-bot rather than reimplementing its logic.",
+  "features": [
+    "Inspect release context from Git history",
+    "Preview the generated changelog first",
+    "Apply only approved changelog updates"
+  ],
+  "examplePrompt": "Prepare a dry-run changelog preview using the release tag and version indicated by this repository.",
+  "author": { "github": "nyaomaru", "name": "Nyaomaru" },
+  "mascot": { "body": "cat", "color": "brand-sky", "activity": "working" },
+  "emoji": "😺",
+  "agent": "claude-code",
+  "permissionMode": "ask-permissions"
+}
