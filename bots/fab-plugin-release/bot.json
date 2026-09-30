@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "fab-plugin-release",
+  "name": "Fab Plugin Release",
+  "description": "Prepares Unreal Engine code plugins for Fab and stops at human-only gates.",
+  "category": "Releases",
+  "about": "Runs the guarded fab-plugin-release-tools preparation pipeline against the current Unreal Engine plugin repository. It validates and packages the plugin, reports blockers, and stops where media approval, source commits, Fab draft creation, or other human action is required.",
+  "features": [
+    "Validate and package Unreal Engine plugins",
+    "Stop at media and source-control approval gates",
+    "Report exact blockers and next human actions"
+  ],
+  "examplePrompt": "Prepare this Unreal Engine plugin for Fab and tell me exactly what still requires human action.",
+  "author": {
+    "github": "metyatech",
+    "name": "metyatech"
+  },
+  "mascot": {
+    "body": "rectangle",
+    "color": "brand-sky",
+    "activity": "working"
+  },
+  "emoji": "📦",
+  "agent": "claude-code",
+  "permissionMode": "ask-permissions",
+  "allowedTools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Bash"
+  ]
+}
