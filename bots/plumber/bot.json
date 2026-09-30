@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "plumber",
+  "name": "Plumber",
+  "description": "Maintains an app you shared with friends. Fixes on a branch, never merges.",
+  "category": "Maintenance",
+  "about": "Point it at an app you built for yourself and shared with a few friends. If the app doesn't have Plumber, it sets it up on a branch. After that, each run it collects what went wrong, saves each failure as a case, and fixes up to two things on a branch. A fix is only proposed if it passes every case saved so far, and nothing merges without you.",
+  "features": [
+    "Turn every \"that was wrong\" into a saved case",
+    "Fix up to two things per run, on a branch",
+    "Ship a fix only if every saved case passes"
+  ],
+  "examplePrompt": "Check what went wrong in my app since the last run and fix what the evidence supports.",
+  "author": { "github": "crocsarecool", "name": "Raunaq Vaisoha" },
+  "mascot": { "body": "doggy", "color": "brand-ember", "activity": "working" },
+  "emoji": "🪠",
+  "agent": "claude-code",
+  "permissionMode": "ask-permissions"
+}
