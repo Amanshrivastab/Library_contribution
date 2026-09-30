@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "skill-auditor",
+  "name": "Skill Auditor",
+  "description": "Checks a skill, plugin or MCP server before you install it. Runs nothing.",
+  "category": "Code review",
+  "about": "Point it at a skill, plugin or MCP server, as a folder or a GitHub URL. The skill-audit-mcp scanner makes a first pass, then the bot reads every instruction file and script itself, rules on each hit and on what the scanner missed, and says whether to install. It never runs anything from the target.",
+  "features": [
+    "Catch key exfiltration and download-and-run",
+    "Rule on every scanner hit, with reasoning",
+    "Write a JSON report you can compare across runs"
+  ],
+  "examplePrompt": "Audit https://github.com/someone/their-skill before I install it. Is it safe?",
+  "author": { "github": "eltociear", "name": "Ikko Eltociear Ashimine" },
+  "mascot": { "body": "ghost", "color": "brand-ember", "activity": "thinking" },
+  "emoji": "🧪",
+  "agent": "claude-code",
+  "permissionMode": "ask-permissions",
+  "allowedTools": ["Read", "Grep", "Glob", "Bash", "Write"]
+}
