@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "rust-symbol-audit",
+  "name": "Symbol Audit",
+  "description": "Reviews Rust dependency bumps for capability creep and supply-chain risk.",
+  "category": "Code review",
+  "about": "A supply-chain reviewer for Rust projects. When Cargo.lock changes, this bot explains what each dependency actually started doing: new network calls, process spawning, build scripts that download and execute payloads, typosquats, fresh publishes, and known advisories. It reads the evidence and helps you decide whether the bump is safe to merge.",
+  "features": [
+    "Explains what changed in a dependency's compiled surface",
+    "Flags build scripts that download and execute payloads",
+    "Drafts sign-off ledger entries once you approve a version"
+  ],
+  "examplePrompt": "Cargo.lock just bumped three crates. Review the changes and tell me if any of them started doing something new.",
+  "author": { "github": "Booyaka101", "name": "Christo Bosch" },
+  "mascot": { "body": "cat", "color": "brand-sky", "activity": "thinking" },
+  "emoji": "🛡️",
+  "agent": "opencode",
+  "model": "zai-coding-plan/glm-5.3",
+  "permissionMode": "ask-permissions"
+}
