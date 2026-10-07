@@ -1,0 +1,25 @@
+{
+  "slug": "sloc-triage",
+  "name": "SLOC Triage",
+  "description": "Resolve sloc-guard findings with focused refactors or justified exemptions",
+  "category": "Maintenance",
+  "about": "Triage file-size and directory-structure findings in GitHub repositories already using sloc-guard. Apply cohesive refactors, justified exceptions, or direct structural fixes, then verify changes and open a pull request; report cases needing a maintainer's decision.",
+  "features": [
+    "Refactor files and folders along cohesive boundaries",
+    "Explain narrowly scoped exceptions to size limits",
+    "Verify changes and open a focused pull request"
+  ],
+  "examplePrompt": "Triage the sloc-guard findings in this repository. Make cohesive fixes, justify scoped exceptions, run the project's checks, and open a pull request for verified changes.",
+  "author": {
+    "github": "doraemonkeys",
+    "name": "Ricky"
+  },
+  "mascot": {
+    "body": "bear",
+    "color": "brand-leaf",
+    "activity": "thinking"
+  },
+  "emoji": "🧭",
+  "agent": "claude-code",
+  "permissionMode": "ask-permissions"
+}
